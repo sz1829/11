@@ -514,7 +514,7 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] != true) {
 								</form>
 								<!--弹出的表单   s-->
 								<div class="dialog_content">
-									<div class="groupMsg addInfo updateDialog dialog move_part dialog-plane" id="airticket-dialog" style="display: block;top: 0px;">
+									<div class="groupMsg addInfo updateDialog dialog move_part dialog-plane" id="airticket-dialog">
 										<ul class="formAction">
 											<li class="amendOrder2 amend-tabInfo">
 												<a href="javascript:void(0);" id="updateConfirm">
@@ -925,7 +925,7 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] != true) {
 												<ul class="clients-info">
 													<li>
 														<dl>
-															<dd class="requiredItem">
+															<!--<dd class="requiredItem">
 																<label>人数</label>
 																<dl class="people-count">
 																	<dd>成人<input type="text" value="0" id="air-ticket-create-adult-number" class="nm-right"/></dd>
@@ -933,11 +933,28 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] != true) {
 																	<dd class="item">儿童<input type="text" value="0" id="air-ticket-create-children-number" class="nm-right"/></dd>
 																	<dd class="item">婴儿<input type="text" value="0" id="air-ticket-create-baby-number" class="nm-right"/></dd>
 																</dl>
-															</dd>
-															<dd class="requiredItem">
+															</dd>-->
+															<!--<dd class="requiredItem">
 																<label>乘客姓名</label>
 																<input type="text" id="air-ticket-create-passenger-list">
-															</dd>
+															</dd>-->
+															<dd class="requiredItem passenger">
+																<label>乘客</label>
+																<div id="passenger-list">
+																	<span>
+																		<select class="passenger-info">
+																			<option value="adult">成人</option>
+																			<option value="youth">青年</option>
+																			<option value="children">儿童</option>
+																			<option value="infant">婴儿</option>
+																		</select>
+																		<input type="text" placeholder="姓/名" class="passenger-name">
+																		<input type="text" placeholder="票号" class='passenger-ticket-number'>
+																	</span>
+																</div>
+																	<img src="../img/addIcon.png" class="addInfo">
+																	<img src="../img/deleteIcon.png" class="deleteInfo">
+																</dd>
 															<dd class="requiredItem">
 																<label>电话</label>
 																<input type="text" id="update-customer-phone">

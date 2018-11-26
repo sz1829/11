@@ -100,8 +100,14 @@ if ($_GET['orderType'] == 'group') {
     echo $sql_indiv;
     $result = $conn->query($sql_indiv);
 
+    $res = array();
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        $res = $row;
+    }
+
+    echo json_encode($res);
     
-    echo $result->fetch_assoc()['COUNT(*)'];
 } else if ($_GET['orderType'] == 'airticket') {
     $salesperson = $login_username;
     $transaction_id = empty($_GET['transaction_id']) ? '%' : $_GET['transaction_id'];

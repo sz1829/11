@@ -16,6 +16,7 @@ $(document).ready(function() {
 	checkInvoice();
 	arrowStatus();
 	rateInfo();//费率
+	passengerInfo();//乘客
 	$("ul.add-msg li.list_cost a").on("mousedown", function() {
 		$(this).addClass("selected");
 	});
@@ -2169,4 +2170,40 @@ function rateInfo() {
 		profitInfor(profit, salePrice, basePrice, mcoAmount, mcoCredit, exchangeRate);
 
 	})
+}
+
+
+function passengerInfo() {
+	$(document).on('click', '.addClients ul.clients-info li dl dd.passenger img.addInfo', function() {
+		addPassenger();
+	});
+	$(document).on('click', '.addClients ul.clients-info li dl dd.passenger img.deleteInfo', function() {
+		deletePassenger();
+	});
+}
+//添加
+function addPassenger() {
+	var e = `
+			<span class="new">
+			<select class='passenger-info'>
+				<option value='adult'>成人</option>
+				<option value='youth'>青年</option>
+				<option value='children'>儿童</option>
+				<option value='infant'>婴儿</option>
+			</select>
+			<input type="text"  placeholder="姓/名" class='passenger-name'>
+			<input type="text"  placeholder="票号" class='passenger-ticket-number'>
+		</span>`;
+	$(".addClients ul.clients-info li dl dd.passenger div").append(e);
+	heightRange();
+}
+//删除
+function deletePassenger() {
+	if($(".addClients ul.clients-info li dl dd.passenger div span").length > 1) {
+		$(".addClients ul.clients-info li dl dd.passenger div span").last().remove();
+	} 
+	else {
+		alert("至少含一项乘客信息");
+	}
+	heightRange();
 }

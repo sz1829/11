@@ -3649,8 +3649,67 @@ ul.add-msg li.expDate {
     color: #f88032;
 }
 .updateDialog .updateForm ul.add-msg li.expDate div.expireDate{
-	width: 25% !important;
+	width: 22% !important;
 }
 .updateDialog .updateForm  ul.add-msg li.expDate div.cardholder{
+	width: 28% !important;
+}
+.updateDialog .updateForm ul.add-msg li.expDate div.expireDate select{
+	width: 35% !important;
+    padding-left: 0px;
+    min-width: 40px;
+}
+.updateDialog .updateForm ul.add-msg li.expDate div.cardholder label{
+	width: 46%;
+}
+.updateDialog .updateForm ul.add-msg li.expDate div.cardholder input[type="text"]{
+	margin-left: 2% !important;
+	width: 53% !important;
+}
+@media only screen and (min-width: 100px) and (max-width: 1512px) {
+	.updateDialog .updateForm ul.add-msg li.expDate div.expireDate{
+		width: 50% !important;
+	}
+	.updateDialog .updateForm ul.add-msg li.expDate div.expireDate select{
+		width: 15% !important;
+		margin-left: 1% !important;
+	}
+	.updateDialog .updateForm ul.add-msg li.expDate div.cardholder{
+		width: 74.5% !important;
+		margin-top: 13px;
+	}
+	.updateDialog .updateForm ul.add-msg li.expDate div.cardholder label{
+		min-width: 92px;
+		width: initial !important;
+	}
+	.updateDialog .updateForm ul.add-msg li.expDate div.cardholder input[type="text"]{
+		width: 28.4% !important;
+    	float: left;
+    	min-width: 83px;
+	}
+	.updateDialog .updateForm .addClients ul.clients-info li dl dd.passenger div input[type="text"]:last-child{
+		margin-left: 0px !important;
+	    width: 40% !important;
+	    margin-top: 10px;
+	}
+	.updateDialog .updateForm .addClients ul.clients-info li dl dd.passenger img.addInfo{
+		right: 8% !important;
+	}
+}
+.updateDialog .updateForm .addClients ul.clients-info li dl dd.passenger div select:first-child{
 	width: 25% !important;
+    min-width: 50px !important;
+}
+.updateDialog .updateForm .addClients ul.clients-info li dl dd.passenger div input[type="text"]{
+	    width: 35% !important;
+}
+.updateDialog .updateForm .addClients ul.clients-info li dl dd.passenger img{
+	width: 20px;
+	height: 20px;
+}
+.updateDialog .updateForm .addClients ul.clients-info li dl dd.passenger img.deleteInfo{
+	right: 1%;
+}
+.updateDialog .updateForm .addClients ul.clients-info li dl dd.passenger img.addInfo{
+	right: 5%;
 }
